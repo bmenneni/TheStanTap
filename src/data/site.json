@@ -108,6 +108,62 @@
   "seo": {
     "metaTitle": "The Quiet Bar | Neighborhood Bar in Little Italy, NYC",
     "metaDescription": "A warm corner bar in Little Italy serving craft beers, natural wines, and classic cocktails. No reservations, just good times at 147 Mulberry Street."
-  }
+  },
+  "articles": [
+    {
+      "slug": "the-art-of-cocktail-making",
+      "title": "The Art of Cocktail Making",
+      "excerpt": "Behind the bar: discover the craftsmanship that goes into every cocktail we serve.",
+      "date": "2024-02-20",
+      "author": "The Quiet Bar Team",
+      "coverImage": "/images/gallery/cocktail-detail.jpg.svg",
+      "markdownFile": "the-art-of-cocktail-making.md"
+    },
+    {
+      "slug": "natural-wines-and-local-beers",
+      "title": "Natural Wines and Local Beers",
+      "excerpt": "Exploring our curated selection of natural wines and craft beers from local breweries.",
+      "date": "2024-03-10",
+      "author": "The Quiet Bar Team",
+      "coverImage": "/images/gallery/draft-taps.jpg.svg",
+      "markdownFile": "natural-wines-and-local-beers.md"
+    },
+    {
+      "slug": "our-vinyl-collection",
+      "title": "Our Vinyl Collection",
+      "excerpt": "Discover the carefully curated vinyl collection that sets the mood for every evening at The Quiet Bar.",
+      "date": "2025-04-05",
+      "author": "The Quiet Bar Team",
+      "coverImage": "/images/gallery/vinyl-corner.jpg.svg",
+      "markdownFile": "our-vinyl-collection.md"
+    },
+    {
+      "slug": "seasonal-menu-updates",
+      "title": "Seasonal Menu Updates",
+      "excerpt": "As the seasons change, so does our menu. Discover what's new this spring at The Quiet Bar.",
+      "date": "2025-04-15",
+      "author": "The Quiet Bar Team",
+      "coverImage": "/images/gallery/cocktail-detail.jpg.svg",
+      "markdownFile": "seasonal-menu-updates.md"
+    },
+    {
+      "slug": "neighborhood-stories",
+      "title": "Neighborhood Stories",
+      "excerpt": "Little Italy has a rich history, and The Quiet Bar is proud to be part of that story.",
+      "date": "2025-04-25",
+      "author": "The Quiet Bar Team",
+      "coverImage": "/images/gallery/exterior-night.jpg.svg",
+      "markdownFile": "neighborhood-stories.md"
+    },
+    {
+      "slug": "crafting-the-perfect-evening",
+      "title": "Crafting the Perfect Evening",
+      "excerpt": "At The Quiet Bar, we believe that a great evening is more than the sum of its parts.",
+      "date": "2025-05-01",
+      "author": "The Quiet Bar Team",
+      "coverImage": "/images/gallery/cozy-corner.jpg.svg",
+      "markdownFile": "crafting-the-perfect-evening.md"
+    }
+  ]
 }
 
