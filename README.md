@@ -1,43 +1,426 @@
-# Astro Starter Kit: Minimal
+# Quiet Bar Theme
 
-```sh
-npm create astro@latest -- --template minimal
+A beautiful, vintage/industrial-styled website template for bars, pubs, and restaurants. Built with [Astro](https://astro.build/) for exceptional performance and ease of customization.
+
+![Quiet Bar Theme](public/images/logo.svg)
+
+## One-Click Deploy
+
+Deploy your own Quiet Bar site with one click:
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/anthropics/quiet-bar)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/anthropics/quiet-bar)
+
+[![Deploy to Cloudflare Pages](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/anthropics/quiet-bar)
+
+## Features
+
+- **Zero Dependencies** - Only Astro, no Tailwind CSS, no UI frameworks, no bloat
+- **Ultra Lightweight** - Pure CSS styling, minimal vanilla JS, blazing fast load times
+- **Vintage/Industrial Aesthetic** - Deep charcoal backgrounds, aged brass accents, elegant typography
+- **JSON-based CMS** - All content managed through a single `site.json` file
+- **Fully Responsive** - Mobile-first design with desktop, tablet, and mobile breakpoints
+- **SEO Optimized** - Meta tags, Open Graph, Twitter Cards, and LocalBusiness structured data
+- **Accessible** - Semantic HTML, ARIA labels, keyboard navigation, high contrast ratios
+- **Performance First** - Lazy-loaded images, minimal JavaScript, optimized fonts
+- **Interactive Components** - Accordion menus, lightbox gallery with keyboard support
+
+### Why No Third-Party Dependencies?
+
+This theme intentionally uses **only Astro** as its dependency:
+
+| What We Don't Use | Why |
+|-------------------|-----|
+| Tailwind CSS | Pure CSS with custom properties is lighter and more maintainable |
+| React/Vue/Svelte | Static site doesn't need client-side frameworks |
+| UI Component Libraries | Custom components are leaner and fully customizable |
+| Animation Libraries | CSS animations handle everything we need |
+| Lightbox Libraries | ~50 lines of vanilla JS does the job |
+
+**Result:** A complete, production-ready site with only **one dependency** in `package.json`.
+
+## Quick Start
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) - One of the following versions:
+  - `v18.20.8` or higher (v18.x LTS)
+  - `v20.3.0` or higher (v20.x LTS)
+  - `v22.0.0` or higher
+  - ⚠️ **Note:** v19.x and v21.x are **not supported**
+- npm, yarn, or pnpm
+
+### Installation
+
+1. **Clone or download the repository**
+
+```bash
+git clone https://github.com/your-username/quiet-bar.git
+cd quiet-bar
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+2. **Install dependencies**
 
-## 🚀 Project Structure
+```bash
+npm install
+```
 
-Inside of your Astro project, you'll see the following folders and files:
+3. **Start the development server**
 
-```text
-/
+```bash
+npm run dev
+```
+
+4. **Open your browser**
+
+Navigate to `http://localhost:4321` to see your site.
+
+## Project Structure
+
+```
+quiet-bar/
 ├── public/
+│   ├── favicon.svg           # Site favicon
+│   ├── fonts/                # Self-hosted fonts (optional)
+│   └── images/
+│       ├── logo.svg          # Your bar's logo
+│       └── gallery/          # Gallery images
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/           # Astro components
+│   │   ├── Header.astro      # Hero section with logo
+│   │   ├── InfoBar.astro     # Sticky contact bar
+│   │   ├── Hours.astro       # Opening hours
+│   │   ├── Tagline.astro     # Brand positioning
+│   │   ├── Menu.astro        # Drinks/food menu
+│   │   ├── Gallery.astro     # Photo gallery with lightbox
+│   │   ├── Location.astro    # Map and directions
+│   │   ├── Press.astro       # Media reviews
+│   │   ├── Contact.astro     # Contact info and notices
+│   │   └── Footer.astro      # Site footer
+│   ├── data/
+│   │   └── site.json         # ⭐ YOUR CONTENT GOES HERE
+│   ├── layouts/
+│   │   └── Layout.astro      # Base HTML layout with SEO
+│   ├── pages/
+│   │   └── index.astro       # Main page
+│   └── styles/
+│       └── global.css        # Global styles and design tokens
+├── astro.config.mjs          # Astro configuration
+├── package.json              # Only 1 dependency: astro
+└── tsconfig.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Content Management
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+All your bar's content is managed through a single JSON file: `src/data/site.json`
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Basic Information
 
-## 🧞 Commands
+```json
+{
+  "name": "YOUR BAR NAME",
+  "shortName": "SHORT",
+  "established": "2024",
+  "phone": "555-123-4567",
+  "email": "hello@yourbar.com",
+  "tagline": "Your catchy tagline here."
+}
+```
 
-All commands are run from the root of the project, from a terminal:
+### Address & Location
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+```json
+{
+  "address": {
+    "full": "123 Main Street, City, State 12345",
+    "short": "123 Main St, City",
+    "crossStreets": "between Oak & Pine"
+  },
+  "coordinates": {
+    "lat": 40.7128,
+    "lng": -74.0060
+  }
+}
+```
 
-## 👀 Want to learn more?
+> **Tip:** Get coordinates from [Google Maps](https://maps.google.com) by right-clicking on your location.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### Opening Hours
+
+```json
+{
+  "openingHours": {
+    "weekday": "Mon – Thu: 5:00 PM – 1:00 AM",
+    "weekend": "Fri – Sun: 3:00 PM – 2:00 AM",
+    "holiday": "Closed on Christmas Day"
+  }
+}
+```
+
+Set `holiday` to `null` if you don't have special holiday hours.
+
+### Menu Items
+
+```json
+{
+  "menu": [
+    {
+      "category": "Drafts",
+      "items": [
+        { "name": "House Lager", "description": "Crisp and refreshing", "badge": null },
+        { "name": "Seasonal IPA", "description": "Rotating selection", "badge": "seasonal" },
+        { "name": "Signature Stout", "description": "Rich and creamy", "badge": "featured" }
+      ]
+    },
+    {
+      "category": "Wines",
+      "items": [...]
+    },
+    {
+      "category": "Spirits",
+      "items": [...]
+    }
+  ]
+}
+```
+
+**Badge Options:**
+- `null` - No badge
+- `"featured"` - Shows "★ Featured" badge
+- `"seasonal"` - Shows "⟡ Seasonal" badge
+
+### Transit Information
+
+```json
+{
+  "transit": [
+    { "line": "A/C/E", "station": "14th Street" },
+    { "line": "L", "station": "8th Avenue" },
+    { "line": "Bus M14", "station": "Main & 1st" }
+  ]
+}
+```
+
+### Gallery Images
+
+```json
+{
+  "gallery": [
+    { "src": "/images/gallery/interior.jpg", "alt": "Cozy bar interior" },
+    { "src": "/images/gallery/cocktails.jpg", "alt": "Signature cocktails" },
+    { "src": "/images/gallery/exterior.jpg", "alt": "Street view at night" }
+  ]
+}
+```
+
+**Image Guidelines:**
+- Recommended size: 800x600px or larger
+- Formats: JPG, PNG, WebP, or SVG
+- Place images in `public/images/gallery/`
+
+### Press & Reviews
+
+```json
+{
+  "press": [
+    {
+      "source": "Local News",
+      "quote": "The best hidden gem in town...",
+      "url": "https://example.com/review"
+    },
+    {
+      "source": "Food Magazine",
+      "quote": "A must-visit destination.",
+      "url": null
+    }
+  ]
+}
+```
+
+Set `url` to `null` if there's no link to the original article.
+
+### Important Notices
+
+```json
+{
+  "notices": [
+    "NO RESERVATIONS",
+    "CASH PREFERRED",
+    "21+ ONLY WITH VALID ID"
+  ]
+}
+```
+
+### Social Media
+
+```json
+{
+  "social": {
+    "instagram": "https://instagram.com/yourbar"
+  }
+}
+```
+
+### SEO Settings
+
+```json
+{
+  "seo": {
+    "metaTitle": "Your Bar Name | Neighborhood Bar in City",
+    "metaDescription": "A warm neighborhood bar serving craft beers and cocktails at 123 Main Street."
+  }
+}
+```
+
+## Customization
+
+### Changing Colors
+
+Edit the CSS custom properties in `src/styles/global.css`:
+
+```css
+:root {
+  /* Background Colors */
+  --color-bg-deep: #1a1a18;      /* Main background */
+  --color-bg-mid: #2a2a26;       /* Section backgrounds */
+  --color-bg-light: #3a3a36;     /* Hover states */
+  
+  /* Brand Colors */
+  --color-primary: #c9a227;      /* Accent color (brass) */
+  --color-secondary: #f5f0e6;    /* Light text/headings */
+  --color-accent: #a85a32;       /* Secondary accent (terracotta) */
+  
+  /* Text Colors */
+  --color-text: #e8e4dc;         /* Body text */
+  --color-text-muted: #9a968e;   /* Subtle text */
+}
+```
+
+### Changing Fonts
+
+1. Update the Google Fonts link in `src/layouts/Layout.astro`
+2. Update the font family variables in `src/styles/global.css`:
+
+```css
+:root {
+  --font-heading: 'Your Heading Font', serif;
+  --font-body: 'Your Body Font', sans-serif;
+}
+```
+
+### Adding/Removing Sections
+
+Edit `src/pages/index.astro` to add, remove, or reorder sections:
+
+```astro
+<Layout>
+  <Header />
+  <InfoBar />
+  
+  <main id="main-content">
+    <Tagline />
+    <Hours />
+    <Menu />
+    <!-- <Gallery /> --> <!-- Commented out to hide -->
+    <Location />
+    <Press />
+    <Contact />
+  </main>
+  
+  <Footer />
+</Layout>
+```
+
+## Deployment
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+This creates an optimized static site in the `dist/` folder.
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+### Deploy Options
+
+#### Option 1: One-Click Deploy (Recommended)
+
+Use the deploy buttons at the top of this README to instantly deploy to:
+- **Netlify** - Free tier available, automatic HTTPS
+- **Vercel** - Free tier available, great performance
+- **Cloudflare Pages** - Free tier available, global CDN
+
+#### Option 2: Manual Deploy
+
+**Netlify:**
+1. Push your code to GitHub
+2. Connect your repo to [Netlify](https://netlify.com)
+3. Build command: `npm run build`
+4. Publish directory: `dist`
+
+**Vercel:**
+1. Push your code to GitHub
+2. Import your repo on [Vercel](https://vercel.com)
+3. Vercel auto-detects Astro settings
+
+**Cloudflare Pages:**
+1. Push your code to GitHub
+2. Connect your repo to [Cloudflare Pages](https://pages.cloudflare.com)
+3. Build command: `npm run build`
+4. Build output directory: `dist`
+
+#### Option 3: Self-Hosted / VPS
+
+1. Build the site: `npm run build`
+2. Upload the `dist/` folder to your server
+3. Configure your web server (Nginx, Apache) to serve static files
+
+**Nginx example:**
+
+```nginx
+server {
+    listen 80;
+    server_name yourbar.com;
+    root /var/www/quiet-bar/dist;
+    index index.html;
+    
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}
+```
+
+## Commands Reference
+
+| Command | Description |
+|---------|-------------|
+| `npm install` | Install dependencies |
+| `npm run dev` | Start dev server at `localhost:4321` |
+| `npm run build` | Build for production to `./dist/` |
+| `npm run preview` | Preview production build locally |
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## License
+
+MIT License - Feel free to use this template for personal or commercial projects.
+
+## Credits
+
+**Quiet Bar Theme** created by **Larry Xue**
+
+---
+
+Need help? Open an issue on GitHub or reach out to the creator.

@@ -37,6 +37,12 @@ const currentYear = new Date().getFullYear();
         Est. {siteData.established} · {siteData.address.short}
       </p>
     </div>
+    
+    <div class="footer__powered">
+      <p class="footer__powered-text">
+        Powered by <a href="https://github.com/larry-xue/quiet-bar" target="_blank" rel="noopener noreferrer" class="footer__powered-link">Quiet Bar Theme</a> created by <a href="https://larryxue.dev" target="_blank" rel="noopener noreferrer" class="footer__powered-author">Larry Xue</a>
+      </p>
+    </div>
   </div>
 </footer>
 
@@ -182,6 +188,35 @@ const currentYear = new Date().getFullYear();
     font-size: var(--text-sm);
     color: var(--color-text-muted);
     margin: 0;
+  }
+  
+  .footer__powered {
+    margin-top: var(--space-6);
+    padding-top: var(--space-4);
+    border-top: 1px solid rgba(232, 228, 220, 0.05);
+    text-align: center;
+  }
+  
+  .footer__powered-text {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    margin: 0;
+    opacity: 0.7;
+  }
+  
+  .footer__powered-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+  
+  .footer__powered-link:hover {
+    color: var(--color-secondary);
+  }
+  
+  .footer__powered-author {
+    color: var(--color-text);
+    font-weight: 600;
   }
   
   @media (max-width: 768px) {
