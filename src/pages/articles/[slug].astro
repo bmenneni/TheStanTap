@@ -1,5 +1,4 @@
 ---
-import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Header from '../../components/Header.astro';
@@ -11,38 +10,36 @@ import siteData from '../../data/site.json';
 export async function getStaticPaths() {
   const articles = siteData.articles || [];
   
-  // Get all Markdown files from content collection
-  const markdownEntries = await getCollection('articles');
+  // Load all Markdown files dynamically
+  const markdownModules = import.meta.glob('../../content/articles/*.md');
   
-  // Create a map of filename to entry
-  const markdownMap = new Map();
-  markdownEntries.forEach(entry => {
-    const filename = entry.id.split('/').pop() || entry.id;
-    markdownMap.set(filename, entry);
+  // Create a map of filename to module path
+  const filenameToPath = new Map<string, string>();
+  for (const path in markdownModules) {
+    const filename = path.split('/').pop() || '';
+    filenameToPath.set(filename, path);
+  }
+  
+  const paths = articles.map((article) => {
+    if (!article.markdownFile) {
+      throw new Error(`Article ${article.slug} is missing markdownFile`);
+    }
+    
+    // Find the corresponding Markdown module path
+    const markdownPath = filenameToPath.get(article.markdownFile);
+    
+    if (!markdownPath) {
+      throw new Error(`Markdown file not found: ${article.markdownFile}. Available files: ${Array.from(filenameToPath.keys()).join(', ')}`);
+    }
+    
+    return {
+      params: { slug: article.slug },
+      props: { 
+        article,
+        markdownPath
+      },
+    };
   });
-  
-  const paths = await Promise.all(
-    articles.map(async (article) => {
-      if (!article.markdownFile) {
-        throw new Error(`Article ${article.slug} is missing markdownFile`);
-      }
-      
-      // Find the corresponding Markdown entry
-      const markdownEntry = markdownMap.get(article.markdownFile);
-      
-      if (!markdownEntry) {
-        throw new Error(`Markdown file not found: ${article.markdownFile}`);
-      }
-      
-      return {
-        params: { slug: article.slug },
-        props: { 
-          article,
-          MarkdownContent: markdownEntry
-        },
-      };
-    })
-  );
   
   return paths;
 }
@@ -57,16 +54,30 @@ interface Props {
     coverImage?: string;
     markdownFile: string;
   };
-  MarkdownContent: {
-    Content: any;
-    render: () => Promise<{ Content: any; headings: any[]; remarkPluginFrontmatter: any }>;
-  };
+  markdownPath: string;
 }
 
-const { article, MarkdownContent } = Astro.props;
+const { article, markdownPath } = Astro.props;
 
-// Render the Markdown content
-const { Content } = await MarkdownContent.render();
+// Import the Markdown content
+const markdownModules = import.meta.glob('../../content/articles/*.md');
+const markdownLoader = markdownModules[markdownPath];
+
+if (!markdownLoader) {
+  throw new Error(`Failed to load markdown module: ${markdownPath}`);
+}
+
+const markdownModule = await markdownLoader() as any;
+
+// Astro's Markdown import returns an object with Content component
+// Handle different possible structures
+let Content: any = markdownModule.Content || 
+                   markdownModule.default?.Content || 
+                   markdownModule.default;
+
+if (!Content) {
+  throw new Error(`Unable to extract Content from markdown module for ${article.markdownFile}`);
+}
 
 const pageTitle = `${article.title} | ${siteData.name}`;
 const pageDescription = article.excerpt;
