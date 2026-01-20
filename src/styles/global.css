@@ -8,11 +8,11 @@
    -------------------------------------------------------------------------- */
 :root {
   /* Color Palette */
-  --color-bg-deep: #1a1a18;
-  --color-bg-mid: #2a2a26;
+  --color-bg-deep: #2A201D;
+  --color-bg-mid: #1F1715;
   --color-bg-light: #3a3a36;
   
-  --color-primary: #c9a227;        /* Aged brass/copper */
+  --color-primary: #D9A441;        /* Golden wheat */
   --color-primary-dim: #a88920;
   --color-secondary: #f5f0e6;      /* Warm cream */
   --color-accent: #a85a32;         /* Terracotta */

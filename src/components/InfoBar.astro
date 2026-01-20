@@ -7,11 +7,6 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
 
 <nav class="info-bar" aria-label="Quick contact information">
   <div class="info-bar__content">
-    <div class="info-bar__item info-bar__item--established">
-      <span class="info-bar__label" aria-hidden="true">Est.</span>
-      <span class="info-bar__value">{siteData.established}</span>
-    </div>
-    
     <a 
       href={phoneHref} 
       class="info-bar__item info-bar__item--phone"
@@ -36,7 +31,6 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
 
 <style>
   .info-bar {
-    position: sticky;
     top: 0;
     z-index: var(--z-sticky);
     background-color: var(--color-bg-mid);

@@ -7,15 +7,15 @@ const navItems = [
   { label: 'Menu', href: '/#menu' },
   { label: 'Gallery', href: '/#gallery' },
   { label: 'Location', href: '/#location' },
-  { label: 'Contact', href: '/#contact' },
-  { label: 'Articles', href: '/articles' },
+  { label: 'Contact', href: '/#contact' }
 ];
 ---
 
 <nav class="navbar" aria-label="Main navigation">
   <div class="navbar__container">
     <a href="#top" class="navbar__logo" aria-label={`${siteData.name} - Return to top`}>
-      <span class="navbar__logo-text">{siteData.shortName}</span>
+      <!-- <span class="navbar__logo-text">{siteData.shortName}</span> -->
+      <img src="/images/logo.jpeg" id="navbar-logo">
     </a>
     
     <button 
@@ -83,10 +83,9 @@ const navItems = [
     position: sticky;
     top: 0;
     z-index: var(--z-sticky);
-    background-color: var(--color-bg-deep);
-    border-bottom: 1px solid rgba(201, 162, 39, 0.2);
+    background-color: #fcfaee;
     backdrop-filter: blur(10px);
-    background-color: rgba(26, 26, 24, 0.95);
+    border-bottom: 3px solid rgb(201, 162, 39);
   }
   
   .navbar__container {
@@ -96,7 +95,7 @@ const navItems = [
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 60px;
+    height: 72px;
   }
   
   .navbar__logo {
@@ -109,6 +108,11 @@ const navItems = [
     color: var(--color-primary);
     letter-spacing: 0.1em;
     transition: color var(--transition-fast);
+  }
+
+  #navbar-logo {
+    height: 64px;
+    width: auto;
   }
   
   .navbar__logo:hover {
@@ -137,18 +141,18 @@ const navItems = [
   }
   
   .navbar__toggle:hover {
-    background-color: var(--color-bg-mid);
+    background-color: var(--color-bg-deep);
     border-color: var(--color-secondary);
     color: var(--color-secondary);
   }
   
   .navbar__toggle:focus-visible {
-    outline: 2px solid var(--color-primary);
+    outline: 2px solid var(--color-primary-dim);
     outline-offset: 2px;
   }
   
   .navbar__toggle--active {
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-dim);
     color: var(--color-text-dark);
     border-color: var(--color-primary);
   }
@@ -178,7 +182,7 @@ const navItems = [
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--color-text);
+    color: #8C2D2B;
     text-decoration: none;
     transition: color var(--transition-fast);
     position: relative;
@@ -222,6 +226,14 @@ const navItems = [
   }
   
   @media (max-width: 768px) {
+    #navbar-logo {
+      height: 48px;
+    }
+
+    .navbar__container {
+      height: 60px;
+    }
+
     .navbar__toggle {
       display: flex;
     }
@@ -233,7 +245,7 @@ const navItems = [
       right: 0;
       flex-direction: column;
       align-items: stretch;
-      background-color: var(--color-bg-deep);
+      background-color: #f5eedc;
       border-top: 1px solid rgba(201, 162, 39, 0.2);
       max-height: 0;
       overflow: hidden;
@@ -247,7 +259,7 @@ const navItems = [
     }
     
     .navbar__item {
-      border-bottom: 1px solid rgba(201, 162, 39, 0.1);
+      border-bottom: 1px solid rgba(201, 162, 39, 0.5);
     }
     
     .navbar__item:last-child {
