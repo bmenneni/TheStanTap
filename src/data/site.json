@@ -18,33 +18,98 @@
     "happyHours": "Mon – Fri: 3:00 PM – 6:00 PM",
     "holiday": null
   },
-  "tagline": "A warm corner in the city of Ames. Good drinks, better company.",
+  "tagline": "A warm corner in the city of Ames. Good food, good drinks, better company.",
   "menu": [
     {
       "category": "Drafts",
       "items": [
-        { "name": "House Pilsner", "description": "Crisp, clean, local", "badge": null },
-        { "name": "Brooklyn Lager", "description": "Amber Vienna-style", "badge": null },
-        { "name": "Rotating IPA", "description": "Ask your bartender", "badge": "seasonal" },
-        { "name": "Guinness", "description": "The classic stout", "badge": null }
+        { "name": "Michelob Ultra", "description": "", "badge": null },
+        { "name": "Angry Orchard", "description": "", "badge": null },
+        { "name": "Easy Eddy", "description": "", "badge": null },
+        { "name": "Citra Solitaire", "description": "", "badge": null },
+        { "name": "Exile Ruthie", "description": "", "badge": null },
+        { "name": "Modelo", "description": "", "badge": null },
+        { "name": "Mango Cart", "description": "", "badge": null},
+        { "name": "Big Wave", "description": "", "badge": null },
+        { "name": "Twisted Tea", "description": "", "badge": null }
       ]
     },
     {
       "category": "Wines",
       "items": [
-        { "name": "House Red", "description": "Spanish Garnacha", "badge": null },
-        { "name": "House White", "description": "Italian Pinot Grigio", "badge": null },
-        { "name": "Natural Selection", "description": "Rotating organic picks", "badge": "featured" },
-        { "name": "Prosecco", "description": "By the glass or bottle", "badge": null }
+        { "name": "House Pinot Noie", "description": "", "badge": null },
+        { "name": "House Pinot Grigio", "description": "", "badge": null },
+        { "name": "House Rose", "description": "", "badge": null },
+        { "name": "House Champagne", "description": "", "badge": null }
       ]
     },
     {
-      "category": "Spirits",
+      "category": "Cocktails",
       "items": [
-        { "name": "Quiet Old Fashioned", "description": "Bourbon, bitters, orange", "badge": "featured" },
-        { "name": "Negroni", "description": "Gin, Campari, sweet vermouth", "badge": null },
-        { "name": "Whiskey Sour", "description": "Rye, lemon, egg white", "badge": null },
-        { "name": "Mezcal Mule", "description": "Smoky twist on the classic", "badge": "seasonal" }
+        { "name": "Cyclone Espresso Martini", "description": "1.5oz vanilla vodka, 1oz Kahlua, 1oz espresso, 0.5oz Bailey's Cocoa powder rim. Tastes like a boozy iced mocha.", "badge": "featured"},
+        { "name": "Classic Margarita", "description": "", "badge": null},
+        { "name": "Mojito", "description": "", "badge": null},
+        { "name": "Long Island", "description": "", "badge": null},
+        { "name": "Espresso Martini", "description": "1.5oz vodka, 1oz coffee liquer (Kahlua or Mr Black), 1oz fresh espresso, syrup (optional)", "badge": null},
+        { "name": "Lemon Meringue Martini", "description": "1.5oz vanilla vodka, 1oz Limoncello, 0.75oz fresh lemon juice, 0.5oz syrup, 0.5oz half-and-half, graham cracker rim", "badge": null},
+        { "name": "Irish Espresso Martini", "description": "1oz vodka, 0.5oz Jameson, 1oz Kahlua, 1oz espresso", "badge": null },
+        { "name": "Cucumber Raspberry Lemonade", "description": "1.5oz vodka (or gin), 0.75pz fresh lemon juice, 1oz raspberry puree, 0.5oz syrup, 3-4 cucumber slices", "badge": null}
+      ]
+    },
+    {
+      "category": "Vodka",
+      "items": [
+        { "name": "Well Vodka", "description": "", "badge": null },
+        { "name": "Grey Goose", "description": "", "badge": null },
+        { "name": "Tito's", "description": "", "badge": null }
+      ]
+    },
+    {
+      "category": "Gin",
+      "items": [
+        { "name": "Well Gin", "description": "", "badge": null },
+        { "name": "Beefeater", "description": "", "badge": null },
+        { "name": "Bombay Sapphire", "description": "", "badge": null}
+      ]
+    },
+    {
+      "category": "Rum",
+      "items": [
+        { "name": "Well Rum", "description": "", "badge": null },
+        { "name": "Captain Morgan", "description": "", "badge": null },
+        { "name": "Bascardi", "description": "", "badge": null }
+      ]
+    },
+    { 
+      "category": "Tequila",
+      "items": [
+        { "name": "Well Tequila", "description": "", "badge": null },
+        { "name": "Jose Cuervo", "description": "" , "badge": null },
+        { "name": "Don Julio", "description": "", "badge": null }
+      ]
+    },
+    {
+      "category": "Whiskey/Bourbon",
+      "items": [
+        { "name": "Well Whiskey", "description": "", "badge": null },
+        { "name": "Maker's Mark", "description": "", "badge": null },
+        { "name": "Jack Daniel's", "description": "", "badge": null }
+      ]
+    },
+    {
+      "category": "Scotch",
+      "items": [
+        { "name": "Well Scotch", "description": "", "badge": null },
+        { "name": "Johnnie Walker Black", "description": "", "badge": null },
+        { "name": "Chivas Regal", "description": "",  "badge": null}
+      ]
+    },
+    {
+      "category": "Liqueurs/Cordials",
+      "items": [
+        { "name": "Aperol", "description": "", "badge": null },
+        { "name": "Campari", "description": "", "badge": null},
+        { "name": "Jagermeister", "description": "", "badge": null}
       ]
     }
   ],
@@ -99,7 +164,6 @@
   ],
   "notices": [
     "NO RESERVATIONS",
-    "CASH PREFERRED (CARD MINIMUM $20)",
     "21+ ONLY WITH VALID ID"
   ],
   "seo": {

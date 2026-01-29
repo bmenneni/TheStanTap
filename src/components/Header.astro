@@ -12,6 +12,7 @@ import siteData from '../data/site.json';
     <span class="header__diamond">◇</span>
     <span class="header__line"></span>
   </div>
+  <a href="https://order.toasttab.com/online/thestantapbarandgrill" target="_blank" class="order-btn">Order Online</a>
 </header>
 
 <style>
@@ -91,6 +92,7 @@ import siteData from '../data/site.json';
     gap: var(--space-4);
     margin-top: var(--space-10);
     color: var(--color-primary);
+    margin-bottom: 50px;
   }
   
   .header__line {
@@ -102,6 +104,20 @@ import siteData from '../data/site.json';
   .header__diamond {
     font-size: var(--text-lg);
     opacity: 0.8;
+  }
+  .order-btn {
+    background-color: var(--color-primary);
+    color: var(--color-bg-mid);
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    border: none;
+  }
+  .order-btn:hover {
+    background-color: var(--color-primary-dim);
+  }
+  .order-btn:active {
+    background-color: #C8942E;
   }
   
   @media (max-width: 640px) {
