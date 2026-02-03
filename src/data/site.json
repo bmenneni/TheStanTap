@@ -18,7 +18,7 @@
     "happyHours": "Mon – Fri: 3:00 PM – 6:00 PM",
     "holiday": null
   },
-  "tagline": "A warm corner in the city of Ames. Good food, good drinks, better company.",
+  "tagline": "A warm corner in the city of Ames. Good drinks, good food, better company.",
   "menu": [
     {
       "category": "Drafts",
@@ -113,36 +113,10 @@
       ]
     }
   ],
-  "transit": [
-    { "line": "J/Z", "station": "Bowery" },
-    { "line": "B/D", "station": "Grand Street" },
-    { "line": "6", "station": "Spring Street" },
-    { "line": "Bus M103", "station": "Grand St & Mulberry" }
-  ],
   "gallery": [
     {
       "src": "/images/gallery/interior-bar.jpg.svg",
       "alt": "Warm interior view of the bar counter with vintage lighting"
-    },
-    {
-      "src": "/images/gallery/cocktail-detail.jpg.svg",
-      "alt": "Handcrafted cocktail with orange peel garnish"
-    },
-    {
-      "src": "/images/gallery/exterior-night.jpg.svg",
-      "alt": "The Quiet Bar storefront at night with warm glow"
-    },
-    {
-      "src": "/images/gallery/cozy-corner.jpg.svg",
-      "alt": "Cozy seating corner with exposed brick walls"
-    },
-    {
-      "src": "/images/gallery/draft-taps.jpg.svg",
-      "alt": "Row of brass draft beer taps"
-    },
-    {
-      "src": "/images/gallery/vinyl-corner.jpg.svg",
-      "alt": "Vintage record player and vinyl collection"
     }
   ],
   "press": [
