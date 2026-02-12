@@ -9,10 +9,12 @@ const { openingHours } = siteData;
     <h2 id="hours-title" class="section__title">Hours</h2>
     
     <div class="hours__grid">
-      <div class="hours__block">
+      <div class="hours__block" id="regular_hours">
         <h3 class="hours__label">Regular Hours</h3>
-        <p class="hours__time">{openingHours.hoursMonToSat}</p>
         <p class="hours__time">{openingHours.hoursSun}</p>
+        <p class="hours__time">{openingHours.hoursMonToWed}</p>
+        <p class="hours__time">{openingHours.hoursThuToFri}</p>
+        <p class="hours__time">{openingHours.hoursSat}</p>
       </div>
       
       <div class="hours__divider" aria-hidden="true">
@@ -127,7 +129,7 @@ const { openingHours } = siteData;
       align-items: start;
     }
     .hours__time {
-      text-align: right;
+      text-align: left;
     }
   }
 </style>

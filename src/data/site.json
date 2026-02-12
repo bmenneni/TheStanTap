@@ -13,9 +13,11 @@
     "lng": -93.648290
   },
   "openingHours": {
-    "hoursMonToSat": "Mon – Sat: 11:00 AM – 11:45 PM",
-    "hoursSun": "Sun: 11:00 AM – 10:00 PM",
-    "happyHours": "Mon – Fri: 3:00 PM – 6:00 PM",
+    "hoursSun": "Sun: 12:00 PM – 11:00 PM",
+    "hoursMonToWed": "Mon – Wed: 4:00 PM – 11:00 PM",
+    "hoursThuToFri": "Thu: 4:00 PM – 2:00 AM",
+    "hoursSat": "Sat: 12:00 PM – 2:00 AM",
+    "happyHours": "Mon – Fri: 5:00 PM – 6:00 PM",
     "holiday": null
   },
   "tagline": "A warm corner in the city of Ames. Good drinks, good food, better company.",
