@@ -15,7 +15,7 @@
   "openingHours": {
     "hoursSun": "Sun: 12:00 PM – 11:00 PM",
     "hoursMonToWed": "Mon – Wed: 4:00 PM – 11:00 PM",
-    "hoursThuToFri": "Thu: 4:00 PM – 2:00 AM",
+    "hoursThuToFri": "Thu – Fri: 4:00 PM – 2:00 AM",
     "hoursSat": "Sat: 12:00 PM – 2:00 AM",
     "happyHours": "Mon – Fri: 5:00 PM – 6:00 PM",
     "holiday": null
